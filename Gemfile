@@ -9,6 +9,7 @@ gem "uglifier", ">= 1.3.0"
 gem "jquery-rails"
 gem "turbolinks"
 gem "slim-rails"
+gem "bootstrap", git: "https://github.com/twbs/bootstrap-rubygem"
 
 group :development, :test do
   gem "pry-byebug"
