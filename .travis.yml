@@ -1,0 +1,15 @@
+language: ruby
+sudo: false
+rvm:
+  - 2.2.3
+cache:
+  bundler: true
+  bundler_args: --jobs=8 --retry=3 --without development
+notifications:
+  email: false
+  slack:
+    secure: qGns/yKmJI6RRX9nQ0wIj06VtGCkceehKkRf6gPB3lc79R2hMEFuq29/lCNkRiTrYgcB/MoDvu9qgmxLSkRBAjjCQ4OPMrpTSz5exF5iomWAnB/tUCR5f6o63v8ARMG01JRBqWAoU+35gqrVXfLbK+yDcJnvX0+X55NhbS6DcVLUahWtMftcgWiLSvVB1RaohTwj8cFJwvrniW2pX12ftPLi7EQRV43KYQICnvZ321u0TlGcbGoZQe45olN3Kyk1VJMvvXy0k+Lq2RtIy+VITu1kXXgbepGUBAEQdjlv/QnEJj2HvtX67gLIGz8iX1q7uHSik2P2ewdr7lwiCSQ0/IIlCFYE3MQPcbvmE5P6iyY+57cavkVM0Z+F/GlIBQYFXzWuPWCJ3ZgVHeWKLCDK3iNpOs0DgLvFUzHK4vUhi7Gdd7TcYhKEzVAlD0I3pKfB0Dal2dc4knTBvRiRc807o0hNbms5yyuyrseBq+LheZmrozFuYDI95dXfCfinm6SJdYsLhW6yfcvpzuK8f8GMuDo5zx6+mZqHbuqBzXcu4q/0z+ep6odvK9pdBRIEvSuBGVi1o7mKsOCxDvKT5YVr3xux92PAnR/x0SPBLiMvTTOJRIjZIosFMcCFQFWVLAhXlbI1x0YWlI5NSvlegSEbYK2zUCbbx+TuM0hZc33FNKU=
+before_script:
+  - bin/setup
+script:
+  - bin/rspec
